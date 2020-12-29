@@ -77,6 +77,7 @@ chmod -R 777 $conf_h5ai/private/cache
 # If an user wants to set htpasswd
 if [ "$HTPASSWD" = "true" ]; then
     htpasswd -b -c "$conf_htpwd" "$HTPASSWD_USER" "$HTPASSWD_PW"
+    rm -rf $conf_nginx
     cp -arf /h5ai_htpasswd.conf /config/nginx/h5ai.conf
 fi
 
