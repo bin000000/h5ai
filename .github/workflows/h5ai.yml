@@ -2,8 +2,8 @@ name: h5ai
 on:
   repository_dispatch:
     types: [h5ai]
-  schedule:
-    - cron: 0 0 * * 0,3
+  #schedule:
+    #- cron: 0 0 * * 0,3
 jobs:
   build:
     runs-on: ubuntu-18.04
